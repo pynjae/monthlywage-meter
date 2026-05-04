@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/holidays/(.*)",
+      "destination": "http://apis.data.go.kr/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
