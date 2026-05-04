@@ -1,5 +1,20 @@
-# Vue 3 + Vite
+# 💰 실시간 수입 트래커 — AI Multi-Agent 개발 가이드
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+> "출근하기 싫을 때, 지금 이 순간에도 돈이 벌리고 있다는 걸 보여주는 동기부여 앱"
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
+
+## 📋 프로젝트 컨셉 요약
+
+### 한 줄 요약
+연봉/월급 기반으로 **지금 이 순간 내가 얼마를 벌고 있는지** 실시간 카운터로 보여주는 웹 서비스
+
+### 핵심 기능
+| 기능 | 설명 |
+|------|------|
+| 실시간 수입 카운터 | 0.1초 단위로 갱신되는 "오늘 번 돈" 금액 표시 |
+| 근무 상태 감지 | 출근 전 / 근무 중 / 점심시간 / 퇴근 완료 / 주말 자동 판별 |
+| 달력 기반 근무일 계산 | 현재 월의 실제 달력에서 주말 제외한 근무일수 자동 계산 |
+| 설정 화면 | 연봉/월급, 출퇴근 시간, 점심시간 설정 |
+| 진행률 시각화 | 원형 프로그레스바로 오늘 근무 진행률 표시 |
+| 통계 대시보드 | 일당, 월급, 분당/초당 수입, 퇴근까지 남은 시간 |
