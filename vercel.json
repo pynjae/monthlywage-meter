@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/holidays/:path*",
-      "destination": "http://apis.data.go.kr/:path*"
-    }
-  ]
-}
