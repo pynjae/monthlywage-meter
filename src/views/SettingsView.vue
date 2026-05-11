@@ -151,6 +151,7 @@
 <script setup>
 import { ref, reactive, computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { useEarnings } from '../composables/useEarnings'
 
 const STORAGE_KEY = 'earnings-tracker-settings'
 const router = useRouter()
@@ -184,19 +185,9 @@ function handleSalaryInput(e) {
   localSettings.salary = raw ? parseInt(raw, 10) : 0
 }
 
-function getWorkingDays() {
-  const now = new Date()
-  const y = now.getFullYear(), m = now.getMonth()
-  const days = new Date(y, m + 1, 0).getDate()
-  let wd = 0
-  for (let d = 1; d <= days; d++) {
-    const dow = new Date(y, m, d).getDay()
-    if (dow !== 0 && dow !== 6) wd++
-  }
-  return wd
-}
+const { workingDaysInMonth } = useEarnings()
 
-const previewWorkDays = computed(() => getWorkingDays())
+const previewWorkDays = computed(() => workingDaysInMonth.value)
 
 const previewMonthly = computed(() => {
   return localSettings.salaryType === 'annual' ? localSettings.salary / 12 : localSettings.salary
